@@ -2,7 +2,7 @@ FROM jekyll/jekyll:4.1.0
 
 # the Jekyll docker image changes commands to be run as jekyll user; this is supposed to increase
 # security but causes all kinds of permission issues. we solve this by adding jekyll to root group
-usermod -a -G root jekyll
+RUN usermod -a -G root jekyll
 
 # when testing locally
 EXPOSE 4000
