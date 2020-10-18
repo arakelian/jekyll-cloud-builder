@@ -2,7 +2,7 @@
 
 This docker image will build [Jekyll](https://jekyllrb.com/) sites on the [Google Cloud Builder](https://cloud.google.com/container-builder/docs/) platform.  It can also be used manually to build a Jekyll site using Docker.
 
-Originally written by [Gordon Leigh](https://github.com/gordonmleigh/jekyll-cloud-builder/blob/master/README.md)
+Inspired by [Gordon Leigh](https://github.com/gordonmleigh/jekyll-cloud-builder).
 
 ## Manual usage
 
