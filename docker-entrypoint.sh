@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
 
-bundle install
+if [ -f Gemfile ]; then
+    bundle install
+fi
+
 exec "$@"
