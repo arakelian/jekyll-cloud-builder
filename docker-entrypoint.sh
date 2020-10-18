@@ -1,8 +1,9 @@
 #!/bin/bash
 set -e
 
-if [ -f Gemfile ]; then
-    bundle install
-fi
+echo "Executing as: $(whoami)"
+ls -al /workspace
+
+bundle install
 
 exec "$@"
