@@ -1,9 +1,5 @@
 FROM jekyll/jekyll:4.1.0
 
-# the Jekyll docker image changes commands to be run as jekyll user; this is supposed to increase
-# security but causes all kinds of permission issues. we solve this by adding jekyll to root group
-RUN usermod -a -G root jekyll
-
 # when testing locally
 EXPOSE 4000
 
@@ -16,5 +12,5 @@ COPY docker-entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT [ "docker-entrypoint.sh" ]
 
-# by default we want to build
+# crtical to understand that this command will be run as UID=1000
 CMD [ "bundle", "exec", "jekyll", "build" ]
